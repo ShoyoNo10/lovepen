@@ -391,11 +391,12 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
 
         <div
           ref={wrapperRef}
-          className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl"
+          className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl touch-none"
         >
           <canvas
             ref={canvasRef}
-            className="block touch-none"
+            style={{ touchAction: "none" }}
+            className="block touch-none select-none"
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
