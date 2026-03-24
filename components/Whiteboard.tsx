@@ -306,7 +306,7 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 px-4 py-6 text-white sm:px-6">
+    <main className="min-h-screen bg-gradient-to-br touch-none from-slate-950 via-slate-900 to-slate-800 px-4 py-6 text-white sm:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="mb-4 rounded-3xl border border-white/10 bg-white/10 p-4 shadow-xl backdrop-blur">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -391,6 +391,7 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
 
         <div
           ref={wrapperRef}
+          style={{ touchAction: "none" }}
           className="overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl touch-none"
         >
           <canvas
